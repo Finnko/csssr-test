@@ -1,0 +1,60 @@
+.plans
+	padding-bottom: 72px
+	+md
+		padding-bottom: 57px
+
+.plans__title
+	margin-bottom: 0
+
+.plans__note
+	margin-bottom: 12px
+
+.plans__list
+	margin: 0
+	padding: 0
+	display: flex
+	flex-wrap: wrap
+	list-style: none
+
+.plans__item
+	&:not(:last-child)
+		margin-right: 25px
+		+md
+			margin-right: 0
+
+	+md
+		margin-bottom: 15px
+		flex-basis: 50%
+	+sm
+		flex-basis: 100%
+
+.plans__label
+	position: relative
+	display: block
+	margin-left: 30px
+	font-size: 20px
+	line-height: 25px
+	color: $accent-text
+	cursor: pointer
+
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: -30px
+		display: block
+		width: 26px
+		height: 26px
+		background-image: url("../img/radio-off.png")
+		background-position: bottom left
+		background-repeat: no-repeat
+
+.plans__input:checked + .plans__label::before
+	background-image: url("../img/radio-on.png")
+
+.plans__input:focus + .plans__label::before
+	box-shadow: 0 0 0 3px #8fbdec
+	border-radius: 50px
+
+.plans__input:disabled + .plans__label::before
+	opacity: 0.4

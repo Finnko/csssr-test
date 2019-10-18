@@ -1,0 +1,16 @@
+section.main__plans.plans
+    h2.main__title.plans__title Какие у вас планы на будущее?
+    p.main__note.plans__note Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+    ul.plans__list
+        li.plans__item
+            input.plans__input.visually-hidden(type='radio' name='plans' id='html-css')
+            label.plans__label(for='html-css') Верстать
+        li.plans__item
+            input.plans__input.visually-hidden(type='radio' name='plans' id='js' checked)
+            label.plans__label(for='js') Прокачиваться в JS
+        li.plans__item
+            input.plans__input.visually-hidden(type='radio' name='plans' id='management')
+            label.plans__label(for='management') Менеджерство
+        li.plans__item
+            input.plans__input.visually-hidden(type='radio' name='plans' id='other')
+            label.plans__label(for='other') Другое

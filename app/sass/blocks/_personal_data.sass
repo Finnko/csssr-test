@@ -1,0 +1,55 @@
+.main__personal
+	padding-bottom: 56px
+
+.data__wrap
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-end
+
+	&:not(:last-child)
+		margin-bottom: 20px
+
+.data__field
+	margin: 0
+	margin-right: 16px
+	font-size: 22.43px
+	line-height: 22.83px
+	+xmd
+		margin-bottom: 15px
+	+xs
+		font-size: 20px
+
+
+.data__input
+	border: none
+	display: block
+	flex-grow: 1
+	margin: 0
+	padding: 0 24px 8px 14px
+	font-family: $optional-font
+	color: $main-text
+	font-size: 30px
+	line-height: 29px
+	background-color: transparent
+	background-image: url("../img/separator.png")
+	background-position: bottom
+	background-repeat: repeat-x
+	+sm
+		font-size: 26px
+	+xs
+		font-size: 20px
+
+	&::placeholder
+		color: $main-text
+		font-size: 30px
+		line-height: 36px
+		+sm
+			font-size: 26px
+		+xs
+			font-size: 20px
+
+
+
+
+
+

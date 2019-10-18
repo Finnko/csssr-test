@@ -1,0 +1,70 @@
+.main__javascript
+	padding-bottom: 13px
+
+.javascript__title
+	margin-bottom: 20px
+	+xs
+		margin-bottom: 25px
+
+.slider
+	position: relative
+	max-width: 770px
+
+.slider__btn
+	position: absolute
+	left: 375px
+	top: -20px
+	width: 18px
+	height: 15px
+	padding: 0
+	border: none
+	background-color: rgba($accent-text, 0)
+	background-image: url("../img/pin.png")
+	background-repeat: no-repeat
+	cursor: pointer
+	+xs
+		top: -15px
+
+	&:active
+		transform: scale(1.1)
+
+.slider__btn .slider__btn--active
+	transform: scale(1.1)
+
+.slider__text-wrap
+	display: flex
+	+md
+		justify-content: space-between
+
+.slider__text
+	margin: 0
+	max-width: 170px
+	font-size: 13px
+	line-height: 19px
+	+xmd
+		font-size: 12px
+	+sm
+		max-width: 100px
+
+	&:first-child
+		margin-right: 84px
+		+md
+			margin-right: 0
+
+	&:nth-child(2)
+		margin-right: 60px
+		+md
+			margin-right: 0
+		+xs
+			display: none
+
+	&:nth-child(3)
+		+xs
+			display: none
+
+	&:last-child
+		margin-left: auto
+		+md
+			margin-left: 0
+
+

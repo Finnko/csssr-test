@@ -1,0 +1,87 @@
+.main__checkboxes
+	padding-bottom: 48px
+
+.main__title
+	margin: 0
+	font-size: 24px
+	line-height: 49.83px
+	+xs
+		font-size: 20px
+		line-height: 24px
+		margin-bottom: 15px
+
+.main__note
+	margin: 0
+	margin-bottom: 24px
+	font-weight: 400
+	color: $opt-text
+	line-height: 23px
+
+.checkboxes
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	+sm
+		justify-content: center
+
+.checkboxes__list
+	margin: 0
+	padding: 0
+	width: 242px
+	list-style: none
+	+md
+		margin-bottom: 15px
+
+.checkboxes__item:not(:last-child)
+	margin-bottom: 10px
+
+.checkboxes__link
+	position: relative
+	z-index: 1
+	margin-left: 5px
+	font-size: 21px
+	line-height: 25px
+	text-decoration: none
+	color: $accent
+	border-bottom: 1px solid $accent
+	transition: border .2s
+
+	&:hover,
+	&:focus
+		border-bottom: 1px solid transparent
+
+	&:active
+		color: lighten($accent, 10%)
+		border-bottom: 1px solid transparent
+
+.checkboxes__label
+	position: relative
+	display: block
+	margin-left: 27px
+	font-size: 21px
+	line-height: 25px
+	color: $accent-text
+	cursor: pointer
+
+	&::before
+		content: ""
+		position: absolute
+		left: -27px
+		top: -5px
+		display: block
+		width: 24px
+		height: 28px
+		background-image: url("../img/checkbox-off.png")
+		background-position: bottom left
+		background-repeat: no-repeat
+
+.checkboxes__input:checked + .checkboxes__label::before
+	background-image: url("../img/checkbox-on.png")
+
+.checkboxes__input:focus + .checkboxes__label::before
+	box-shadow: 0 0 0 3px #8fbdec
+	border-radius: 3px
+
+.checkboxes__input:disabled + .checkboxes__label::before
+	opacity: 0.4
+
