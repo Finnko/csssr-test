@@ -4,17 +4,17 @@ const slider = document.querySelector('.slider');
 const pin = slider.querySelector('.slider__btn');
 const textarea = document.querySelector('.about-textarea');
 
-var CoordsLimit = {
+const CoordsLimit = {
 	LEFT: 0 - pin.offsetWidth / 2,
 	RIGHT: slider.offsetWidth - pin.offsetWidth / 2,
 };
 
-var setStartCoords = function () {
+const setStartCoords = function () {
 	var start = slider.offsetWidth / 2;
 	pin.style.left = start + 'px'
 };
 
-var updateAreaHeight = function () {
+const updateAreaHeight = function () {
 	textarea.style.height = '';
 	textarea.style.height = textarea.scrollHeight + 'px';
 };
@@ -22,16 +22,16 @@ var updateAreaHeight = function () {
 pin.addEventListener('mousedown', function (evt) {
 	evt.preventDefault();
 	pin.classList.add('slider__btn--active');
-	var startCoordsX = evt.clientX;
+	let startCoordsX = evt.clientX;
 
-	var mouseMoveHandler = function (moveEvt) {
+	const mouseMoveHandler = function (moveEvt) {
 		moveEvt.preventDefault();
 
-		var shiftX = startCoordsX - moveEvt.clientX;
+		let shiftX = startCoordsX - moveEvt.clientX;
 
 		startCoordsX = moveEvt.clientX;
 
-		var currentCoordsX = pin.offsetLeft - shiftX;
+		let currentCoordsX = pin.offsetLeft - shiftX;
 
 		currentCoordsX = currentCoordsX > CoordsLimit.RIGHT ? CoordsLimit.RIGHT : currentCoordsX;
 		currentCoordsX = currentCoordsX < CoordsLimit.LEFT ? CoordsLimit.LEFT : currentCoordsX;
@@ -39,7 +39,7 @@ pin.addEventListener('mousedown', function (evt) {
 		pin.style.left = currentCoordsX + 'px';
 	};
 
-	var mouseUpHandler = function (upEvt) {
+	const mouseUpHandler = function (upEvt) {
 		upEvt.preventDefault();
 		pin.classList.remove('slider__btn--active');
 
