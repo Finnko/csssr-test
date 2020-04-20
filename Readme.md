@@ -17,4 +17,4 @@
 
 ---
  
-Прямая ссылка [Тестовое CSSSR](http://csssr.alexkhab.ru)
+Демо [Тестовое CSSSR](http://alexkhab.ru)
