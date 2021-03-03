@@ -30,7 +30,7 @@
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^7.0.0",
     "node-sass": "^4.11.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "webpack": "^4.35.2",
     "webpack-stream": "^5.2.1"
   },
